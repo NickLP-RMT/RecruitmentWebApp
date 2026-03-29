@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment Web App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Recruitment + Online Assessment</h1>
+        <nav>
+          <a href="#jobs">Job Openings</a>
+          <a href="#apply">Apply Now</a>
+          <a href="#test">Online Test</a>
+          <a href="/admin.html">HR Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container stack">
+      <section id="jobs" class="card">
+        <h2>ตำแหน่งที่เปิดรับ</h2>
+        <div class="jobs">
+          <button class="job-btn" data-job="HR-001">HR Officer</button>
+          <button class="job-btn" data-job="IT-001">IT Support</button>
+          <button class="job-btn" data-job="ADM-001">Admin Officer</button>
+          <button class="job-btn" data-job="PROD-001">Production Staff</button>
+        </div>
+        <p id="jobSelected">ตำแหน่งที่เลือก: ยังไม่ได้เลือก</p>
+      </section>
+
+      <section id="apply" class="card">
+        <h2>ฟอร์มสมัครงาน</h2>
+        <form id="applicationForm" class="stack">
+          <input name="fullName" type="text" placeholder="ชื่อ-นามสกุล" required />
+          <input name="phone" type="tel" placeholder="เบอร์โทร" />
+          <input name="email" type="email" placeholder="Email" required />
+          <textarea name="address" placeholder="ที่อยู่"></textarea>
+          <textarea name="education" placeholder="การศึกษา"></textarea>
+          <textarea name="experience" placeholder="ประสบการณ์ทำงาน"></textarea>
+          <textarea name="skills" placeholder="ทักษะ"></textarea>
+          <label>Resume/Transcript/Photo (ระบบ starter จะเก็บเฉพาะชื่อไฟล์)</label>
+          <input id="attachments" type="file" multiple />
+          <label class="consent">
+            <input type="checkbox" name="consentAccepted" required />
+            ยินยอมให้เก็บและใช้ข้อมูลตามนโยบายความเป็นส่วนตัว
+          </label>
+          <button type="submit">ส่งใบสมัคร</button>
+        </form>
+        <p id="applyResult"></p>
+      </section>
+
+      <section id="test" class="card">
+        <h2>แบบทดสอบออนไลน์ (ตัวอย่าง)</h2>
+        <div id="testContainer" class="stack"></div>
+        <button id="scoreBtn" type="button">คำนวณคะแนน</button>
+        <p id="scoreResult"></p>
+      </section>
+    </main>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
