@@ -1,0 +1,17 @@
+{
+  "name": "recruitment-web-app",
+  "version": "1.0.0",
+  "description": "Recruitment Web App + Online Assessment starter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "recruitment",
+    "assessment",
+    "google-sheets"
+  ],
+  "author": "",
+  "license": "MIT"
+}
